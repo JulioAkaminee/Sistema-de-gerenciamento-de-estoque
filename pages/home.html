@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/icons/favicon_estoque.svg" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <title>Estoque</title>
+</head>
+<body>
+    <header id="container_header">
+        <div>
+            <img id="image_logo" src="../assets/images/logo_estoque_black.svg" alt="logo_akm_estoque">
+            <img id="image_logo_second" src="../assets/icons/favicon_estoque.svg" alt="icone_estoque">
+        </div>
+    </header>
+    <main>
+        <div id="stock_navigation">
+            <button>Meu estoque</button>
+            <button>Movimentações</button>
+            <button>Fornecedores</button>
+        </div>
+        <div id="invetory_records">
+            <button id="register_demand">Registrar <br> Entrada</button>
+            <button id="add_demand">Adicionar <br> Pedidos</button>
+            <button id="register_output">Registrar <br> Saída</button>
+        </div>
+
+        <div id="container_register_demand">
+            <form action="" id="form_register_demand">
+                <h1>REGISTRAR ENTRADA</h1>
+                <div id="product_name">
+                    <label for="">NOME DO PRODUTO</label>
+                    <input type="text" id="name_product_input">
+                </div>
+                <div id="product_code_bar">
+                    <label for="">CÓDIGO DE BARRAS</label>
+                    <input type="number" id="code_bar_input">
+                    <div>
+                        <input type="checkbox" name="" id="checkbox_bar_code">
+                        <span>Não tenho código de barras</span>
+                    </div>
+                </div>
+                <div id="product_quantity">
+                    <label for="">QUANTIDADE</label>
+                    <input type="number" id="quantity_product_input">
+                </div>
+                <div id="product_min_stock">
+                    <label for="">ESTOQUE MINIMO</label>
+                    <input type="number" id="min_stock_input">
+                    <div>
+                        <input type="checkbox" name="" id="checkbox_min_stock">
+                        <span>Sem estoque minimo</span>
+                    </div>
+                </div>
+                <div id="product_value">
+                    <label for="">PREÇO</label>
+                    <input type="number" id="value_product_input">
+                </div>
+                
+                <div>
+                    <button>Adicionar</button>
+                    <button>Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <script src="../assets/js/meuestoque.js"></script>
+    
+</body>
+</html>

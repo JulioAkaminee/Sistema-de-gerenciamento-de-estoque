@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <!-- Favicon Estoque -->
+    <link rel="shortcut icon" href="../assets/icons/favicon_estoque.svg" type="image/x-icon">
+    <!-- Link com CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+</head>
+<body>
+    <form action="" id="register_form">
+        <div id="login">
+            <img id="logo" src="../assets/images/logo_estoque.svg" alt="imagem ilustratíva Akm estoque.">
+            <!-- Campo de Email -->
+            <div class="container_input_login" id="email">
+                <label for="">Email</label>
+                <input required type="email" placeholder="Digite seu email" id="user_email_register">
+            </div>
+            <!-- Campo de Senha -->
+            <div class="container_input_login" id="password">
+                <img src="../assets/icons/visibility_off.svg" alt="icone de senha não vísivel" id="visibility_off">
+                <label for="">Senha</label>
+                <input required type="password" placeholder="Digite sua senha" id="user_password_register" minlength="5">
+            </div>
+            <!-- Campo de confirmação de senha -->
+            <div class="container_input_login" id="confirm_password">
+                
+                <img src="../assets/icons/visibility_off.svg" alt="icone de senha não vísivel" id="visibility_off2">
+                <label for="">Senha</label>
+                <input required type="password" placeholder="Confirme sua senha" id="user_password_confirmed" minlength="5">
+            </div>
+            <!-- Botões de Ação -->
+            <div class="action_buttons">
+                <button id="btn_register">Cadastrar</button>
+                <a href="../index.html"><span>Entrar</span></a>
+        
+            </div>
+        </div>
+    </form>
+    
+    <!-- Link com o JavaScript --> 
+    <script src="../assets/js/registrodeusuario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html> 
