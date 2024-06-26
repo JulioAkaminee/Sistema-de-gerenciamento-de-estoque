@@ -8,14 +8,25 @@
     box-sizing: border-box;
     font-family: poppins;
 }
-body{
-   
+
+body::before {
+    content: '';
+    background-image: url('../images/estoque.jpg');
     
+    background-size:cover;
+    filter: brightness(0.5); /* Ajuste o valor conforme necessário */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: -1; /* Coloque a camada abaixo do conteúdo */
 }
+
 
 /* Header com imagem centralizadas */
 header{
-    background: #c9c9c9bf; 
+    background: #ffffff; 
     width: 100%;
     height: 118px;
 
@@ -55,9 +66,9 @@ header{
         margin: 3px;
         width: 100%;
         height: 32px;
-        background: #DADADA;
+        background: #ffffff;
         
-        color: #0000008c;
+        color: #000000;
         
         border: none;
 
@@ -103,7 +114,7 @@ header{
 #container_register_demand{
     width: 100vw;
     height: 100dvh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
@@ -115,7 +126,7 @@ header{
     padding: 20px; /* Espaçamento interno */
     border: 1px solid #ccc; /* Borda */
     z-index: 9999; /* Valor alto para garantir que fique na frente de outros elementos */
-
+    transition: 300ms;
     h1{
     color: #000;
     font-family: Poppins;
@@ -126,19 +137,58 @@ header{
     margin-bottom: 10px;
     }
     form{
-        
+        scale: 0;
         display: flex;
         flex-direction: column;
         background: white;
         padding: 23px;
         border-radius: 10px;
+        width: 383px;
+        transition: 300ms;
         
     }
    
 }
+
+#container_checkbox_bar_code, #container_checkbox_stock_min{
+    display: flex;
+    margin-top: 5px;
+    input{
+        cursor: pointer;
+        margin-right: 5px;
+    }
+}
+#code_bar{
+    align-items: center;
+    display: flex;
+    img{
+        width: 18px;
+        cursor: pointer;
+    }
+        
+}    
+
+#modal_code_bar{
+    position: fixed; /* Para manter o modal fixo na tela, mesmo ao rolar */
+    display: none;
+    top: 32%;
+    
+    justify-content: center;
+    width: 100%;
+    z-index: 99999;
+
+    span{
+        text-align: center;
+        background-color: white;
+        width: 500px;
+        padding: 10px;
+        box-shadow: 1px 1px 5px black;
+    }
+}
 #product_name, #product_code_bar, #product_quantity, #product_min_stock, #product_value{
     display: flex;
     flex-direction: column;
+    margin-top: 0.5em;
     
     label{
     color: rgba(0, 0, 0, 0.50);
@@ -160,9 +210,30 @@ header{
     span{
     color: rgba(0, 0, 0, 0.50);
     font-family: Poppins;
-    font-size: 12px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
 
+    }
+
+   
+}
+
+#container_buttons_register{
+    margin-top: 15px;
+    display: flex;
+    justify-content: end;
+
+    button{
+        color: #000000af;
+        border: none;
+        padding: 5px;
+        margin-left: 5px;
+        cursor: pointer;
+        background: none;
+        transition: 200ms;
+    }
+    button:hover{
+        background-color: rgba(128, 128, 128, 0.267);
     }
 }

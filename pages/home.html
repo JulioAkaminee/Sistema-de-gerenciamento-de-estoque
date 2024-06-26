@@ -8,6 +8,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/home.css">
     <title>Estoque</title>
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <header id="container_header">
@@ -28,6 +31,10 @@
             <button id="register_output">Registrar <br> Saída</button>
         </div>
 
+        <div id="modal_code_bar">
+            <span>Caso não tenha um código de barras para seu produto,
+                gere um codigo de barras para seu produto <a href="https://www.invertexto.com/codigo-barras" target="_blank">aqui</a></span>
+        </div>
         <div id="container_register_demand">
             <form action="" id="form_register_demand">
                 <h1>REGISTRAR ENTRADA</h1>
@@ -36,9 +43,13 @@
                     <input type="text" id="name_product_input">
                 </div>
                 <div id="product_code_bar">
-                    <label for="">CÓDIGO DE BARRAS</label>
+                    <div id="code_bar">
+                        <label for="" id="text_code_bar">CÓDIGO DE BARRAS </label>
+                        <img id="icon_info" src="/assets/icons/info.svg" alt="">
+                    </div>
+                    
                     <input type="number" id="code_bar_input">
-                    <div>
+                    <div id="container_checkbox_bar_code">
                         <input type="checkbox" name="" id="checkbox_bar_code">
                         <span>Não tenho código de barras</span>
                     </div>
@@ -48,9 +59,9 @@
                     <input type="number" id="quantity_product_input">
                 </div>
                 <div id="product_min_stock">
-                    <label for="">ESTOQUE MINIMO</label>
+                    <label for="" id="text_stock_min">ESTOQUE MINIMO</label>
                     <input type="number" id="min_stock_input">
-                    <div>
+                    <div id="container_checkbox_stock_min">
                         <input type="checkbox" name="" id="checkbox_min_stock">
                         <span>Sem estoque minimo</span>
                     </div>
@@ -60,15 +71,15 @@
                     <input type="number" id="value_product_input">
                 </div>
                 
-                <div>
-                    <button>Adicionar</button>
-                    <button>Cancelar</button>
+                <div id="container_buttons_register">
+                    <button id="closeForm">Cancelar</button>
+                    <button id="add">Adicionar</button>
                 </div>
             </form>
         </div>
     </main>
     
-    <script src="../assets/js/meuestoque.js"></script>
+    <script src="/assets/js/formregistrar.js"></script>
     
 </body>
 </html>
