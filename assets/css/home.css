@@ -122,9 +122,9 @@ header{
     top: 50%; /* Posiciona o modal no centro verticalmente */
     left: 50%; /* Posiciona o modal no centro horizontalmente */
     transform: translate(-50%, -50%); /* Centraliza o modal */
-    background-color: #00000060; /* Cor de fundo do modal */
+   
     padding: 20px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda */
+  
     z-index: 9999; /* Valor alto para garantir que fique na frente de outros elementos */
     transition: 300ms;
     h1{
@@ -235,5 +235,72 @@ header{
     }
     button:hover{
         background-color: rgba(128, 128, 128, 0.267);
+    }
+}
+
+/* modal form  */
+
+#add_demand{
+    width: 100vw;
+    height: 100dvh;
+    scale: 0;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+
+    position: fixed; /* Para manter o modal fixo na tela, mesmo ao rolar */
+    top: 50%; /* Posiciona o modal no centro verticalmente */
+    left: 50%; /* Posiciona o modal no centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza o modal */
+    
+    padding: 20px; /* Espaçamento interno */
+   
+    z-index: 9999; /* Valor alto para garantir que fique na frente de outros elementos */
+
+    form{
+       
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 23px;
+        border-radius: 10px;
+        width: 383px;
+        transition: 300ms;
+        z-index: 9999;
+        h1{
+            font-weight: 400;
+            font-size: clamp(24px,2vw,32px);
+        }
+    }
+    
+    
+    
+    .add_demand_labels{
+        display: flex;
+        flex-direction: column;
+
+        input{
+            margin: 5px;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            width: 100%;
+        }
+    }
+    
+
+}
+
+#buttons_modal{
+    margin-top: 15px;
+    display: flex;
+    justify-content: end;
+    button{
+        margin: 0 5px;
+        cursor: pointer;
+        padding: 5px;
+        border: none;
+        background: none;
+        font-weight: 500;
     }
 }

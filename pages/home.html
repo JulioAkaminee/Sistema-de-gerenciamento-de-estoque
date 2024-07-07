@@ -27,7 +27,7 @@
         </div>
         <div id="invetory_records">
             <button id="register_demand">Registrar <br> Entrada</button>
-            <button id="add_demand">Adicionar <br> Pedidos</button>
+            <button id="addDemand" >Adicionar <br> Pedidos</button>
             <button id="register_output">Registrar <br> Saída</button>
         </div>
 
@@ -77,9 +77,44 @@
                 </div>
             </form>
         </div>
+        <div id="add_demand">
+            <form id="formAddDemand" action="">
+                <h1>Adicionar Pedidos</h1>
+                <div class="add_demand_labels">
+                    <label for="">NOME DO PRODUTO</label>
+                    <select name="" id="">
+                        <option value="">teste</option>
+                        <option value="">teste</option>
+                        <option value="">teste</option>
+                    </select>
+                </div>
+                <div class="add_demand_labels">
+                    <label for="">QUANTIDADE</label>
+                    <input  type="number" value="">
+                </div>
+                <div class="add_demand_labels">
+                    <label for="">PREÇO</label>
+                    <input type="number" value="">
+                </div>
+                <div class="add_demand_labels">
+                    <label for="">FORNECEDOR</label>
+                    <input type="text" value="">
+                </div>
+                <div class="add_demand_labels">
+                    <label for="">DATA</label>
+                    <input type="date">
+                </div>
+                <div id="buttons_modal">
+                    <button id="cancel_add_demand">Cancelar</button>
+                    <button id="add_add_demand">Adicionar</button>
+                </div>
+            </form>
+
+        </div>
     </main>
     
     <script src="/assets/js/formregistrar.js"></script>
+    <script src="../assets/js/formadicionar.js"></script>
     
 </body>
 </html>
