@@ -73,16 +73,17 @@
                 
                 <div id="container_buttons_register">
                     <button id="closeForm">Cancelar</button>
-                    <button id="add">Adicionar</button>
+                    <button id="add">Registrar</button>
                 </div>
             </form>
         </div>
         <div id="add_demand">
             <form id="formAddDemand" action="">
-                <h1>Adicionar Pedidos</h1>
+                <h1>ADICIONAR PEDIDOS</h1>
                 <div class="add_demand_labels">
                     <label for="">NOME DO PRODUTO</label>
-                    <select name="" id="">
+                    <select name="" id="" class="select_input">
+                        <option value="">Selecione o produto</option>
                         <option value="">teste</option>
                         <option value="">teste</option>
                         <option value="">teste</option>
@@ -106,15 +107,47 @@
                 </div>
                 <div id="buttons_modal">
                     <button id="cancel_add_demand">Cancelar</button>
-                    <button id="add_add_demand">Adicionar</button>
+                    <button id="add_add_demand">Registrar</button>
                 </div>
             </form>
 
+        </div>
+
+        <div id="register_exit">
+            <form action="" id="formRegisterExit">
+                <h1>REGISTRAR SAÍDA</h1>
+                <div id="register_exit_labels">
+                    <label for="">NOME DO PRODUTO</label>
+                    <input type="text">
+                </div>
+                <div id="register_exit_labels">
+                    <label for="">QUANTIDADE</label>
+                    <input type="number">
+                </div>
+                <div id="register_exit_labels">
+                    <label for="">AÇÃO</label>
+                    <select name="" id="" class="select_input">
+                        <option value="">Selecione a ação</option>
+                        <option value="">teste</option>
+                        <option value="">teste</option>
+                    </select>
+                </div>
+                <div id="register_exit_labels">
+                    <label for="">DATA</label>
+                    <input type="date">
+                </div>
+
+                <div id="buttons_modal_register_exit">
+                    <button id="btn_cancel_registerExit">Cancelar</button>
+                    <button>Registrar</button>
+                </div>
+            </form>
         </div>
     </main>
     
     <script src="/assets/js/formregistrar.js"></script>
     <script src="../assets/js/formadicionar.js"></script>
+    <script src="../assets/js/formregisterexit.js"></script>
     
 </body>
 </html>

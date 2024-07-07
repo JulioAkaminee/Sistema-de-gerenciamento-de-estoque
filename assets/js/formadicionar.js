@@ -9,16 +9,30 @@ formAddDemand.addEventListener("submit", function(event){
     
 })
 
-btnCancelDemand.addEventListener("click", function(){
-    const modalAddDemand = document.getElementById("add_demand")
-
-    modalAddDemand.style.scale = "0"
-})
 btnAddDemand.addEventListener("click", function(){
-    const modalAddDemand = document.getElementById("add_demand")
+    const formAddDemand = document.getElementById("formAddDemand")
+    const modal = document.getElementById("add_demand")
 
-    modalAddDemand.style.scale = "1"
-    modalAddDemand.style.display = "flex"
     
- 
+    document.getElementById("add_demand").style.display = "flex"
+    setTimeout(() => {
+        document.getElementById("formAddDemand").style.scale = "1"
+        
+    }, 150);
+        
+    
+  
+})
+
+btnCancelDemand.addEventListener("click", function(){
+    const formAddDemand = document.getElementById("formAddDemand")
+    const modal = document.getElementById("add_demand")
+        
+    
+  
+    formAddDemand.style.scale = "0"
+
+    setTimeout(() => {
+        modal.style.display = "none"
+    }, 100);
 })

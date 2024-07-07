@@ -1,133 +1,124 @@
 /* Importando font family poppins */
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Css globais */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: poppins;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
 }
 
 body::before {
-    content: '';
-    background-image: url('../images/estoque.jpg');
-    
-    background-size:cover;
-    filter: brightness(0.5); /* Ajuste o valor conforme necessário */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100dvh;
-    z-index: -1; /* Coloque a camada abaixo do conteúdo */
-}
+  content: "";
+  background-image: url("../images/estoque.jpg");
 
+  background-size: cover;
+  filter: brightness(0.6); /* Ajuste o valor conforme necessário */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: -1; /* Coloque a camada abaixo do conteúdo */
+}
 
 /* Header com imagem centralizadas */
-header{
-    background: #ffffff; 
-    width: 100%;
-    height: 118px;
+header {
+  background: #ffffff;
+  width: 100%;
+  height: 118px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
     display: flex;
     justify-content: center;
-    align-items: center;
 
-    div{
-        display: flex;
-        justify-content: center;
-        
-        width: 250px;
-        height: 60px;
-
-       
-    }
-
+    width: 250px;
+    height: 60px;
+  }
 }
-#image_logo{
-    width: 80%;
+#image_logo {
+  width: 80%;
 }
-#image_logo_second{
-    width: 50px;
+#image_logo_second {
+  width: 50px;
 }
 
 /* Navegação do estoque */
 
-#stock_navigation{
-    display: flex;
-    flex-direction: row;
+#stock_navigation {
+  display: flex;
+  flex-direction: row;
 
-    margin-top: 15px;
+  margin-top: 5px;
+  width: 100%;
+
+  button {
+    margin: 7px;
     width: 100%;
-    
-    
-    button{
-        margin: 3px;
-        width: 100%;
-        height: 32px;
-        background: #ffffff;
-        
-        color: #000000;
-        
-        border: none;
+    height: 32px;
+    background: #ffffff;
 
-             
-        text-align: center;
-        font-family: Poppins;
-        font-size: clamp(12px,2.5vw,16px);
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        cursor: pointer;
- 
-    }
-    button:hover{
-        background: #9b9a9a;
-    }
-    
+    color: #000000;
+
+    border: none;
+
+    text-align: center;
+    font-family: Poppins;
+    font-size: clamp(12px, 2.5vw, 16px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #9b9a9a;
+  }
 }
 
 /* Ações do estoque */
 
-#invetory_records{
-    display: flex;
-    
-    button{
-        margin:  5px 3px;
-        background: black;
-        color: white;
-        width: 100%;
-        padding: 10px;
-        line-height: 13px;
-        border: none;
-        cursor: pointer;
-    }
-    button:hover{
-        background: #303030;
-        
-    }
+#invetory_records {
+  display: flex;
+
+  button {
+    margin: 1px 7px;
+    background: black;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    line-height: 13px;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #303030;
+  }
 }
 
 /* Modal registrar entrada */
 
-#container_register_demand{
-    width: 100vw;
-    height: 100dvh;
-    display: none;
-    justify-content: center;
-    align-items: center;
+#container_register_demand {
+  width: 100vw;
+  height: 100dvh;
+  display: none;
+  justify-content: center;
+  align-items: center;
 
-    position: fixed; /* Para manter o modal fixo na tela, mesmo ao rolar */
-    top: 50%; /* Posiciona o modal no centro verticalmente */
-    left: 50%; /* Posiciona o modal no centro horizontalmente */
-    transform: translate(-50%, -50%); /* Centraliza o modal */
-   
-    padding: 20px; /* Espaçamento interno */
-  
-    z-index: 9999; /* Valor alto para garantir que fique na frente de outros elementos */
-    transition: 300ms;
-    h1{
+  position: fixed; /* Para manter o modal fixo na tela, mesmo ao rolar */
+  top: 50%; /* Posiciona o modal no centro verticalmente */
+  left: 50%; /* Posiciona o modal no centro horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza o modal */
+
+  padding: 20px; /* Espaçamento interno */
+
+  z-index: 9999; /* Valor alto para garantir que fique na frente de outros elementos */
+  transition: 300ms;
+  h1 {
     color: #000;
     font-family: Poppins;
     font-size: 20px;
@@ -135,172 +126,250 @@ header{
     font-weight: 500;
     line-height: 15px; /* 75% */
     margin-bottom: 10px;
-    }
-    form{
-        scale: 0;
-        display: flex;
-        flex-direction: column;
-        background: white;
-        padding: 23px;
-        border-radius: 10px;
-        width: 383px;
-        transition: 300ms;
-        
-    }
-   
-}
-
-#container_checkbox_bar_code, #container_checkbox_stock_min{
-    display: flex;
-    margin-top: 5px;
-    input{
-        cursor: pointer;
-        margin-right: 5px;
-    }
-}
-#code_bar{
-    align-items: center;
-    display: flex;
-    img{
-        width: 18px;
-        cursor: pointer;
-    }
-        
-}    
-
-#modal_code_bar{
-    position: fixed; /* Para manter o modal fixo na tela, mesmo ao rolar */
-    display: none;
-    top: 32%;
-    
-    justify-content: center;
-    width: 100%;
-    z-index: 99999;
-
-    span{
-        text-align: center;
-        background-color: white;
-        width: 500px;
-        padding: 10px;
-        box-shadow: 1px 1px 5px black;
-    }
-}
-#product_name, #product_code_bar, #product_quantity, #product_min_stock, #product_value{
+  }
+  form {
+    scale: 0;
     display: flex;
     flex-direction: column;
-    margin-top: 0.5em;
-    
-    label{
-    color: rgba(0, 0, 0, 0.50);
+    background: white;
+    padding: 23px;
+    border-radius: 10px;
+    width: 383px;
+    transition: 300ms;
+  }
+}
+
+#container_checkbox_bar_code,
+#container_checkbox_stock_min {
+  display: flex;
+  margin-top: 5px;
+  input {
+    cursor: pointer;
+    margin-right: 5px;
+  }
+}
+#code_bar {
+  align-items: center;
+  display: flex;
+  img {
+    width: 18px;
+    cursor: pointer;
+  }
+}
+
+#modal_code_bar {
+  position: fixed; /* Para manter o modal fixo na tela, mesmo ao rolar */
+  display: none;
+  top: 32%;
+
+  justify-content: center;
+  width: 100%;
+  z-index: 99999;
+
+  span {
+    text-align: center;
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px black;
+  }
+}
+#product_name,
+#product_code_bar,
+#product_quantity,
+#product_min_stock,
+#product_value {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+
+  label {
+    color: rgba(0, 0, 0, 0.5);
 
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 15px; /* 93.75% */
-    }
+  }
 
-    input{
-        border: none;
-        border-bottom: 1px solid black;
-        outline: none;
-        
-    }
+  input {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+  }
 
-    span{
-    color: rgba(0, 0, 0, 0.50);
+  span {
+    color: rgba(0, 0, 0, 0.5);
     font-family: Poppins;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-
-    }
-
-   
+  }
 }
 
-#container_buttons_register{
-    margin-top: 15px;
-    display: flex;
-    justify-content: end;
+#container_buttons_register {
+  margin-top: 15px;
+  display: flex;
+  justify-content: end;
 
-    button{
-        color: #000000af;
-        border: none;
-        padding: 5px;
-        margin-left: 5px;
-        cursor: pointer;
-        background: none;
-        transition: 200ms;
-    }
-    button:hover{
-        background-color: rgba(128, 128, 128, 0.267);
-    }
+  button {
+    color: #000000af;
+    border: none;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    background: none;
+    transition: 200ms;
+  }
+  button:hover {
+    background-color: rgba(128, 128, 128, 0.267);
+  }
 }
 
 /* modal form  */
 
-#add_demand{
-    width: 100vw;
-    height: 100dvh;
+#add_demand {
+  width: 100vw;
+  height: 100dvh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+
+  position: fixed; /* Para manter o modal fixo na tela, mesmo ao rolar */
+  top: 50%; /* Posiciona o modal no centro verticalmente */
+  left: 50%; /* Posiciona o modal no centro horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza o modal */
+
+  padding: 20px; /* Espaçamento interno */
+
+  z-index: 9999; /* Valor alto para garantir que fique na frente de outros elementos */
+
+  form {
     scale: 0;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 23px;
+    border-radius: 10px;
+    width: 383px;
     transition: 300ms;
-
-    position: fixed; /* Para manter o modal fixo na tela, mesmo ao rolar */
-    top: 50%; /* Posiciona o modal no centro verticalmente */
-    left: 50%; /* Posiciona o modal no centro horizontalmente */
-    transform: translate(-50%, -50%); /* Centraliza o modal */
-    
-    padding: 20px; /* Espaçamento interno */
-   
-    z-index: 9999; /* Valor alto para garantir que fique na frente de outros elementos */
-
-    form{
-       
-        display: flex;
-        flex-direction: column;
-        background: white;
-        padding: 23px;
-        border-radius: 10px;
-        width: 383px;
-        transition: 300ms;
-        z-index: 9999;
-        h1{
-            font-weight: 400;
-            font-size: clamp(24px,2vw,32px);
-        }
+    z-index: 9999;
+    h1 {
+      font-weight: 500;
+      font-size: clamp(20px, 1vw, 30px);
     }
-    
-    
-    
-    .add_demand_labels{
-        display: flex;
-        flex-direction: column;
 
-        input{
-            margin: 5px;
-            border: none;
-            border-bottom: 1px solid black;
-            outline: none;
-            width: 100%;
-        }
+    label{
+      color: rgba(0, 0, 0, 0.5);
     }
-    
+  }
 
+  .add_demand_labels {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      height: 15px;
+      margin-top: 5px;
+      border: none;
+      border-bottom: 1px solid black;
+      outline: none;
+      width: 100%;
+    }
+  }
 }
 
-#buttons_modal{
-    margin-top: 15px;
-    display: flex;
-    justify-content: end;
-    button{
-        margin: 0 5px;
-        cursor: pointer;
-        padding: 5px;
-        border: none;
-        background: none;
-        font-weight: 500;
-    }
+#buttons_modal {
+  margin-top: 15px;
+  display: flex;
+  justify-content: end;
+  button {
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    background: none;
+    font-weight: 500;
+  }
+  button:hover {
+    background-color: rgba(128, 128, 128, 0.267);
+  }
+}
+
+/* modal registrar saída */
+
+.select_input{
+  border: none;
+  border-radius: 5px;
+  background: #CCC;
+  height: 25px;
+  padding: 3px;
+}
+
+#register_exit {
+  width: 100vw;
+  height: 100dvh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+
+  position: fixed; /* Para manter o modal fixo na tela, mesmo ao rolar */
+  top: 50%; /* Posiciona o modal no centro verticalmente */
+  left: 50%; /* Posiciona o modal no centro horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza o modal */
+  padding: 20px; /* Espaçamento interno */
+  z-index: 9999; /* Valor alto para garantir que fique na frente de outros elementos */
+
+  label{
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+#formRegisterExit {
+  scale: 0;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 23px;
+  border-radius: 10px;
+  width: 383px;
+  transition: 300ms;
+
+  input {
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 100%;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: clamp(20px, 1vw, 30px);
+  }
+}
+
+#register_exit_labels {
+  display: flex;
+  flex-direction: column;
+}
+
+#buttons_modal_register_exit {
+  margin-top: 15px;
+  display: flex;
+  justify-content: end;
+
+  button {
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    background: none;
+    font-weight: 500;
+  }
+  button:hover {
+    background-color: rgba(128, 128, 128, 0.267);
+  }
 }
