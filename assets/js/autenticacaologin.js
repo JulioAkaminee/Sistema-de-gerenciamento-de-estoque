@@ -1,65 +1,65 @@
 // Autenticando Usuario
 const btnLogin = document.getElementById("btn_login");
 
-btnLogin.addEventListener("click", function(event) {
-    event.preventDefault();
+// btnLogin.addEventListener("click", function(event) {
+//     // event.preventDefault();
 
-    // Resgatando array de usuários no localStorage
-    let usuariosJSON = localStorage.getItem("usuarios");
+//     // Resgatando array de usuários no localStorage
+//     let usuariosJSON = localStorage.getItem("usuarios");
 
-    if (usuariosJSON === null) {
-        Swal.fire({
-            title: "Nenhum usuário cadastrado",
-            icon: "warning"
-        });
-        return;
-    }
+//     if (usuariosJSON === null) {
+//         Swal.fire({
+//             title: "Nenhum usuário cadastrado",
+//             icon: "warning"
+//         });
+//         return;
+//     }
 
-    let usuarios = JSON.parse(usuariosJSON);
+//     let usuarios = JSON.parse(usuariosJSON);
 
-    let email = document.getElementById("user_email").value;
-    let password = document.getElementById("user_password").value;
+//     let email = document.getElementById("user_email").value;
+//     let password = document.getElementById("user_password").value;
 
-    if (email === "" || password === "") {
-        Swal.fire({
-            title: "Preencha todos os campos",
-            icon: "warning"
-        });
-    } else {
-        // Verificar se existe um usuário com o email fornecido
-        let usuarioEncontrado = usuarios.find(function(user) {
-            return user.emailUser === email;
-        });
+//     if (email === "" || password === "") {
+//         Swal.fire({
+//             title: "Preencha todos os campos",
+//             icon: "warning"
+//         });
+//     } else {
+//         // Verificar se existe um usuário com o email fornecido
+//         let usuarioEncontrado = usuarios.find(function(user) {
+//             return user.emailUser === email;
+//         });
 
-        if (usuarioEncontrado) {
-            // Se o usuário for encontrado, verificar se a senha está correta
-            if (usuarioEncontrado.passwordUser === password) {
-                Swal.fire({
-                    title: "Autenticação bem sucedida",
-                    icon: "success",
-                    showConfirmButton: false
-                });
+//         if (usuarioEncontrado) {
+//             // Se o usuário for encontrado, verificar se a senha está correta
+//             if (usuarioEncontrado.passwordUser === password) {
+//                 Swal.fire({
+//                     title: "Autenticação bem sucedida",
+//                     icon: "success",
+//                     showConfirmButton: false
+//                 });
 
-                setTimeout(() => {
-                    window.location.replace("pages/home.html");
-                }, 1000);
+//                 setTimeout(() => {
+//                     window.location.replace("pages/home.html");
+//                 }, 1000);
 
-                // Armazenar indicador de login
-                localStorage.setItem('isLoggedIn', true);
-            } else {
-                Swal.fire({
-                    title: "Senha incorreta",
-                    icon: "error"
-                });
-            }
-        } else {
-            Swal.fire({
-                title: "Email não cadastrado",
-                icon: "warning"
-            });
-        }
-    }
-});
+//                 // Armazenar indicador de login
+//                 localStorage.setItem('isLoggedIn', true);
+//             } else {
+//                 Swal.fire({
+//                     title: "Senha incorreta",
+//                     icon: "error"
+//                 });
+//             }
+//         } else {
+//             Swal.fire({
+//                 title: "Email não cadastrado",
+//                 icon: "warning"
+//             });
+//         }
+//     }
+// });
 
 //Função para alterar a visibilidade do input de senha
 const btnVisibilityOFF = document.getElementById("visibility_off");

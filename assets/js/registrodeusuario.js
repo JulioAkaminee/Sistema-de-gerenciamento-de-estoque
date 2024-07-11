@@ -37,22 +37,13 @@ cadastrar.addEventListener("click", function(event) {
             title: "Preencha todos os campos",
             icon: "warning"
         });
-        event.preventDefault(); // Impedir o envio do formulário
+       
         return; // Sair da função para evitar a execução adicional do código
     }
 
-    // Verificar se o email já está cadastrado
-    const usuarios = localStorage.getItem('usuarios') ? JSON.parse(localStorage.getItem('usuarios')) : [];
-    const usuarioEncontrado = usuarios.find(user => user.emailUser === email);
+    
 
-    if (usuarioEncontrado) {
-        Swal.fire({
-            title: "Email já tem cadastro",
-            icon: "warning"
-        });
-        event.preventDefault();
-        return;
-    }
+   
 
     // Verificar se as senhas são iguais
     if (password !== passwordConfirmed) {
@@ -61,18 +52,11 @@ cadastrar.addEventListener("click", function(event) {
             icon: "error"
         });
         event.preventDefault();
+        
         return;
     }
 
-    // Se todas as verificações passarem, cadastrar o usuário
-    const novoUsuario = {
-        emailUser: email,
-        passwordUser: password
-    };
-
-    usuarios.push(novoUsuario);
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
+    
     Swal.fire({
         title: "Usuário cadastrado com sucesso",
         icon: "success",
@@ -83,13 +67,12 @@ cadastrar.addEventListener("click", function(event) {
     window.location.href = "../index.html"; 
     }, 2000);
 
-    console.log(novoUsuario);
+
 
     
 
    
 
-    event.preventDefault(); // Impedir o envio do formulário
 });
 
 

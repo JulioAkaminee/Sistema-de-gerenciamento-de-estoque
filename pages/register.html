@@ -11,30 +11,30 @@
     
 </head>
 <body>
-    <form action="" id="register_form">
+    <form action="../assets/php/cadastroUsuario.php" id="register_form" method="post">
         <div id="login">
             <img id="logo" src="../assets/images/logo_estoque.svg" alt="imagem ilustratíva Akm estoque.">
             <!-- Campo de Email -->
             <div class="container_input_login" id="email">
                 <label for="">Email</label>
-                <input required type="email" placeholder="Digite seu email" id="user_email_register">
+                <input required type="email" name="email" placeholder="Digite seu email" id="user_email_register">
             </div>
             <!-- Campo de Senha -->
             <div class="container_input_login" id="password">
                 <img src="../assets/icons/visibility_off.svg" alt="icone de senha não vísivel" id="visibility_off">
                 <label for="">Senha</label>
-                <input required type="password" placeholder="Digite sua senha" id="user_password_register" minlength="5">
+                <input required type="password" name="password" placeholder="Digite sua senha" id="user_password_register" minlength="5">
             </div>
             <!-- Campo de confirmação de senha -->
             <div class="container_input_login" id="confirm_password">
                 
                 <img src="../assets/icons/visibility_off.svg" alt="icone de senha não vísivel" id="visibility_off2">
                 <label for="">Senha</label>
-                <input required type="password" placeholder="Confirme sua senha" id="user_password_confirmed" minlength="5">
+                <input required type="password" name="check_password" placeholder="Confirme sua senha" id="user_password_confirmed" minlength="5">
             </div>
             <!-- Botões de Ação -->
             <div class="action_buttons">
-                <button id="btn_register">Cadastrar</button>
+                <button name="cadastrar" id="btn_register">Cadastrar</button>
                 <a href="../index.html"><span>Entrar</span></a>
         
             </div>
