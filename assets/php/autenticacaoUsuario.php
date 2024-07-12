@@ -26,10 +26,15 @@ if(isset($_POST['entrar'])){
             // Usuário encontrado, verificar senha
             $row = mysqli_fetch_assoc($result_select);
             if($row['senha'] == $passwordLogin){
-                echo "Login correto";
-                
+                echo '<script>alert("Login feito com sucesso")
+                window.location.href = "../../pages/home.html";
+                </script>';
+
             } else {
-                echo "Senha incorreta";
+                 echo '")
+                window.location.href = "../../pages/home.html";
+                </script>';
+
             }
         } else {
             echo "Usuário não encontrado";

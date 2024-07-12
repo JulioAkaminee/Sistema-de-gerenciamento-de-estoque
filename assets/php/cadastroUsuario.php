@@ -22,13 +22,17 @@ if(isset($_POST['cadastrar'])){
     $result_select = mysqli_query($con, $sql_select);
     
     if(mysqli_num_rows($result_select) > 0){
-        echo "Email já cadastrado. Escolha outro email.";
+        echo '<script>alert("Email ja cadastrado, Escolha outro email")
+               window.location.href = "../../register,.html";
+                </script>';
     } else {
         // Insere o novo usuário na tabela
         $sql_insert = "INSERT INTO usuarios (email, senha) VALUES ('$email', '$senha')";
         
         if(mysqli_query($con, $sql_insert)){
-            echo "Usuário cadastrado com sucesso.";
+            echo '<script>alert("Usuario cadastrado com sucesso")
+                window.location.href = "../../index.html";
+                </script>';
         } else {
             echo "Erro ao cadastrar usuário: " . mysqli_error($con);
         }

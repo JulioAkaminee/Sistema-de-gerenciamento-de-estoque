@@ -34,11 +34,11 @@ const btnLogin = document.getElementById("btn_login");
 //         if (usuarioEncontrado) {
 //             // Se o usuário for encontrado, verificar se a senha está correta
 //             if (usuarioEncontrado.passwordUser === password) {
-//                 Swal.fire({
-//                     title: "Autenticação bem sucedida",
-//                     icon: "success",
-//                     showConfirmButton: false
-//                 });
+                // Swal.fire({
+                //     title: "Autenticação bem sucedida",
+                //     icon: "success",
+                //     showConfirmButton: false
+                // });
 
 //                 setTimeout(() => {
 //                     window.location.replace("pages/home.html");
@@ -73,11 +73,11 @@ btnVisibilityOFF.addEventListener("click", function() {
     }
 });
 
-// Verificar se o usuário está logado e redirecioná-lo para a página inicial
-document.addEventListener("DOMContentLoaded", function() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
+// // Verificar se o usuário está logado e redirecioná-lo para a página inicial
+// document.addEventListener("DOMContentLoaded", function() {
+//     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-    if (isLoggedIn) {
-        window.location.href = "pages/home.html"; // Altere "home.html" para o caminho correto da sua página inicial
-    }
-});
+//     if (isLoggedIn) {
+//         window.location.href = "pages/home.html"; // Altere "home.html" para o caminho correto da sua página inicial
+//     }
+// });
